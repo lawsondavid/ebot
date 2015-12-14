@@ -18,7 +18,7 @@
 module.exports = (robot) ->
   acronymsPrefix = 'acronyms'
 
-  getAcronyms (robot) -> robot.brain.get(acronymsPrefix) || {}
+###  getAcronyms (robot) -> robot.brain.get(acronymsPrefix) || {}
 
   saveAcronyms (robot, acronyms) -> robot.brain.save(acronymsPrefix, acronyms)
 
@@ -30,7 +30,7 @@ module.exports = (robot) ->
   deleteAcronym (robot, acronym) ->
     acronyms = getAcronyms(robot)
     delete acronyms[acronym]
-    saveAcronyms(robot, acronyms)
+    saveAcronyms(robot, acronyms)###
 
   robot.respond /dave test/i, (msg) -> msg.send('hi dave')
 
