@@ -17,7 +17,7 @@
 
 module.exports = (robot) ->
   acronymsPrefix = 'acronyms'
-
+###
   getAcronyms () -> robot.brain.get(acronymsPrefix) || {}
 
   saveAcronyms (acronyms) -> robot.brain.save(acronymsPrefix, acronyms)
@@ -56,4 +56,4 @@ module.exports = (robot) ->
   robot.respond /acro -delete (.*)/i, (msg) ->
     acronym = msg.match[1].trim().toUpperCase()
     deleteAcronym(acronym)
-    msg.send "#{acronym} deleted"
+    msg.send "#{acronym} deleted"###
